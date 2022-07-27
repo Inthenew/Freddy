@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blockbench user</author>
+      <authoring_tool>Blockbench</authoring_tool>
+    </contributor>
+    <created>2022-07-26T13:22:47.175Z</created>
+    <modified>2022-07-26T13:22:47.175Z</modified>
+    <unit name="meter" meter="1.0"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material_0-effect">
+      <profile_COMMON>
+        <newparam sid="Image_0-surface">
+          <surface type="2D">
+            <init_from>Image_0</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Image_0-sampler">
+          <sampler2D>
+            <source>Image_0-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Image_0-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Image_0" name="Image_0">
+      <init_from>texture.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material_0-material" name="Material_0">
+      <instance_effect url="#Material_0-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh" name="cube">
+      <mesh>
+        <source id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-positions">
+          <float_array id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-positions-array" count="24">0.8 0.5 1 0.8 0.5 -1 0.8 0 1 0.8 0 -1 0 0.5 -1 0 0.5 1 0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-normals">
+          <float_array id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-map-0">
+          <float_array id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-map-0-array" count="48">0.25 0.75 0.34375 0.75 0.34375 0.6875 0.25 0.6875 0 0.75 0.25 0.75 0.25 0.6875 0 0.6875 0.59375 0.75 0.6875 0.75 0.6875 0.6875 0.59375 0.6875 0.34375 0.75 0.59375 0.75 0.59375 0.6875 0.34375 0.6875 0.34375 0.75 0.25 0.75 0.25 1 0.34375 1 0.4375 1 0.34375 1 0.34375 0.75 0.4375 0.75</float_array>
+          <technique_common>
+            <accessor source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-vertices">
+          <input semantic="POSITION" source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="33c89211-a601-2e85-3388-ea6d4be75191-mesh" name="cube">
+      <mesh>
+        <source id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-positions">
+          <float_array id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-positions-array" count="24">0.3 0 1 0.3 0 0.7 0.3 -0.7 1 0.3 -0.7 0.7 0 0 0.7 0 0 1 0 -0.7 0.7 0 -0.7 1</float_array>
+          <technique_common>
+            <accessor source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-normals">
+          <float_array id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-map-0">
+          <float_array id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-map-0-array" count="48">0.15625 0.65625 0.1875 0.65625 0.1875 0.570313 0.15625 0.570313 0.125 0.65625 0.15625 0.65625 0.15625 0.570313 0.125 0.570313 0.21875 0.65625 0.25 0.65625 0.25 0.570313 0.21875 0.570313 0.1875 0.65625 0.21875 0.65625 0.21875 0.570313 0.1875 0.570313 0.1875 0.65625 0.15625 0.65625 0.15625 0.6875 0.1875 0.6875 0.21875 0.6875 0.1875 0.6875 0.1875 0.65625 0.21875 0.65625</float_array>
+          <technique_common>
+            <accessor source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="33c89211-a601-2e85-3388-ea6d4be75191-mesh-vertices">
+          <input semantic="POSITION" source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#33c89211-a601-2e85-3388-ea6d4be75191-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="e33d6b02-77c3-1871-3082-9d684400075e-mesh" name="cube">
+      <mesh>
+        <source id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-positions">
+          <float_array id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-positions-array" count="24">0.8 0 -0.7 0.8 0 -1 0.8 -0.7 -0.7 0.8 -0.7 -1 0.5 0 -1 0.5 0 -0.7 0.5 -0.7 -1 0.5 -0.7 -0.7</float_array>
+          <technique_common>
+            <accessor source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-normals">
+          <float_array id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-map-0">
+          <float_array id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-map-0-array" count="48">0.03125 0.65625 0.0625 0.65625 0.0625 0.570313 0.03125 0.570313 0 0.65625 0.03125 0.65625 0.03125 0.570313 0 0.570313 0.09375 0.65625 0.125 0.65625 0.125 0.570313 0.09375 0.570313 0.0625 0.65625 0.09375 0.65625 0.09375 0.570313 0.0625 0.570313 0.0625 0.65625 0.03125 0.65625 0.03125 0.6875 0.0625 0.6875 0.09375 0.6875 0.0625 0.6875 0.0625 0.65625 0.09375 0.65625</float_array>
+          <technique_common>
+            <accessor source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="e33d6b02-77c3-1871-3082-9d684400075e-mesh-vertices">
+          <input semantic="POSITION" source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#e33d6b02-77c3-1871-3082-9d684400075e-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh" name="cube">
+      <mesh>
+        <source id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-positions">
+          <float_array id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-positions-array" count="24">0.3 0 -0.7 0.3 0 -1 0.3 -0.7 -0.7 0.3 -0.7 -1 0 0 -1 0 0 -0.7 0 -0.7 -1 0 -0.7 -0.7</float_array>
+          <technique_common>
+            <accessor source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-normals">
+          <float_array id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-map-0">
+          <float_array id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-map-0-array" count="48">0.15625 0.859375 0.1875 0.859375 0.1875 0.773438 0.15625 0.773438 0.125 0.859375 0.15625 0.859375 0.15625 0.773438 0.125 0.773438 0.21875 0.859375 0.25 0.859375 0.25 0.773438 0.21875 0.773438 0.1875 0.859375 0.21875 0.859375 0.21875 0.773438 0.1875 0.773438 0.1875 0.859375 0.15625 0.859375 0.15625 0.890625 0.1875 0.890625 0.21875 0.890625 0.1875 0.890625 0.1875 0.859375 0.21875 0.859375</float_array>
+          <technique_common>
+            <accessor source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-vertices">
+          <input semantic="POSITION" source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh" name="cube">
+      <mesh>
+        <source id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-positions">
+          <float_array id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-positions-array" count="24">0.8 0 1 0.8 0 0.7 0.8 -0.7 1 0.8 -0.7 0.7 0.5 0 0.7 0.5 0 1 0.5 -0.7 0.7 0.5 -0.7 1</float_array>
+          <technique_common>
+            <accessor source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-normals">
+          <float_array id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-map-0">
+          <float_array id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-map-0-array" count="48">0.03125 0.859375 0.0625 0.859375 0.0625 0.773438 0.03125 0.773438 0 0.859375 0.03125 0.859375 0.03125 0.773438 0 0.773438 0.09375 0.859375 0.125 0.859375 0.125 0.773438 0.09375 0.773438 0.0625 0.859375 0.09375 0.859375 0.09375 0.773438 0.0625 0.773438 0.0625 0.859375 0.03125 0.859375 0.03125 0.890625 0.0625 0.890625 0.09375 0.890625 0.0625 0.890625 0.0625 0.859375 0.09375 0.859375</float_array>
+          <technique_common>
+            <accessor source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-vertices">
+          <input semantic="POSITION" source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh" name="cube">
+      <mesh>
+        <source id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-positions">
+          <float_array id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-positions-array" count="24">0.6 1.025 -0.8 0.6 1.025 -1.2 0.6 0.4 -0.8 0.6 0.4 -1.2 0.2 1.025 -1.2 0.2 1.025 -0.8 0.2 0.4 -1.2 0.2 0.4 -0.8</float_array>
+          <technique_common>
+            <accessor source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-normals">
+          <float_array id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-map-0">
+          <float_array id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-map-0-array" count="48">0.046875 0.953125 0.09375 0.953125 0.09375 0.875 0.046875 0.875 0 0.953125 0.046875 0.953125 0.046875 0.875 0 0.875 0.140625 0.953125 0.1875 0.953125 0.1875 0.875 0.140625 0.875 0.09375 0.953125 0.140625 0.953125 0.140625 0.875 0.09375 0.875 0.09375 0.953125 0.046875 0.953125 0.046875 1 0.09375 1 0.140625 1 0.09375 1 0.09375 0.953125 0.140625 0.953125</float_array>
+          <technique_common>
+            <accessor source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="bc13f29a-795d-fcff-32c1-f45efe063382-mesh-vertices">
+          <input semantic="POSITION" source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh" name="cube">
+      <mesh>
+        <source id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-positions">
+          <float_array id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-positions-array" count="24">0.41875 1.4375 -0.9375 0.41875 1.4375 -1.0625 0.41875 1.18125 -0.9375 0.41875 1.18125 -1.0625 0.29375 1.4375 -1.0625 0.29375 1.4375 -0.9375 0.29375 1.18125 -1.0625 0.29375 1.18125 -0.9375</float_array>
+          <technique_common>
+            <accessor source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-normals">
+          <float_array id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-map-0">
+          <float_array id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-map-0-array" count="48">0.015625 0.984375 0.03125 0.984375 0.03125 0.953125 0.015625 0.953125 0 0.984375 0.015625 0.984375 0.015625 0.953125 0 0.953125 0.046875 0.984375 0.0625 0.984375 0.0625 0.953125 0.046875 0.953125 0.03125 0.984375 0.046875 0.984375 0.046875 0.953125 0.03125 0.953125 0.03125 0.984375 0.015625 0.984375 0.015625 1 0.03125 1 0.046875 1 0.03125 1 0.03125 0.984375 0.046875 0.984375</float_array>
+          <technique_common>
+            <accessor source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-vertices">
+          <input semantic="POSITION" source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh" name="cube">
+      <mesh>
+        <source id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-positions">
+          <float_array id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-positions-array" count="24">-0.29375 1.4125 -0.9375 -0.29375 1.4125 -1.0625 -0.29375 1.15625 -0.9375 -0.29375 1.15625 -1.0625 -0.41875 1.4125 -1.0625 -0.41875 1.4125 -0.9375 -0.41875 1.15625 -1.0625 -0.41875 1.15625 -0.9375</float_array>
+          <technique_common>
+            <accessor source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-normals">
+          <float_array id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-map-0">
+          <float_array id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-map-0-array" count="48">0.015625 0.984375 0.03125 0.984375 0.03125 0.953125 0.015625 0.953125 0 0.984375 0.015625 0.984375 0.015625 0.953125 0 0.953125 0.046875 0.984375 0.0625 0.984375 0.0625 0.953125 0.046875 0.953125 0.03125 0.984375 0.046875 0.984375 0.046875 0.953125 0.03125 0.953125 0.03125 0.984375 0.015625 0.984375 0.015625 1 0.03125 1 0.046875 1 0.03125 1 0.03125 0.984375 0.046875 0.984375</float_array>
+          <technique_common>
+            <accessor source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-vertices">
+          <input semantic="POSITION" source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0-material" count="6">
+          <input semantic="VERTEX" source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4</vcount>
+          <p>3 0 3 6 0 2 4 0 1 1 0 0 2 1 7 3 1 6 1 1 5 0 1 4 7 2 11 2 2 10 0 2 9 5 2 8 6 3 15 7 3 14 5 3 13 4 3 12 5 4 19 0 4 18 1 4 17 4 4 16 6 5 23 3 5 22 2 5 21 7 5 20</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e" name="cube" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+        <rotate sid="rotationZ">0 0 1 180</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 180</rotate>
+        <instance_geometry url="#fdae8fa6-9cc3-2ee0-e573-9ffc6e5ca10e-mesh" name="cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_0-material" target="#Material_0-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="bc13f29a-795d-fcff-32c1-f45efe063382" name="cube" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+        <rotate sid="rotationZ">0 0 1 179.99999999999994</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 -57.499999999999986</rotate>
+        <instance_geometry url="#bc13f29a-795d-fcff-32c1-f45efe063382-mesh" name="cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_0-material" target="#Material_0-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="97ae947a-f704-a2b8-86e1-d526c8af1429" name="bone" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <node id="d25899c3-75c3-0a2f-cbcb-38aa0d677b7c" name="cube" type="NODE">
+          <scale sid="scale">1 1 1</scale>
+          <translate sid="location">0 0 0</translate>
+          <rotate sid="rotationZ">0 0 1 180</rotate>
+          <rotate sid="rotationY">0 1 0 0</rotate>
+          <rotate sid="rotationX">1 0 0 180</rotate>
+          <instance_geometry url="#d25899c3-75c3-0a2f-cbcb-38aa0d677b7c-mesh" name="cube">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0-material" target="#Material_0-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="3104815f-22c1-dbc7-d050-6720331f219d" name="bone2" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <node id="e33d6b02-77c3-1871-3082-9d684400075e" name="cube" type="NODE">
+          <scale sid="scale">1 1 1</scale>
+          <translate sid="location">0 0 0</translate>
+          <rotate sid="rotationZ">0 0 1 180</rotate>
+          <rotate sid="rotationY">0 1 0 0</rotate>
+          <rotate sid="rotationX">1 0 0 180</rotate>
+          <instance_geometry url="#e33d6b02-77c3-1871-3082-9d684400075e-mesh" name="cube">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0-material" target="#Material_0-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="ec95c30b-f992-2c99-67c3-8e34668e2e94" name="bone3" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <node id="0bf09a45-4e5c-0dfe-5d32-7684fbf6246b" name="cube" type="NODE">
+          <scale sid="scale">1 1 1</scale>
+          <translate sid="location">0 0 0</translate>
+          <rotate sid="rotationZ">0 0 1 180</rotate>
+          <rotate sid="rotationY">0 1 0 0</rotate>
+          <rotate sid="rotationX">1 0 0 180</rotate>
+          <instance_geometry url="#0bf09a45-4e5c-0dfe-5d32-7684fbf6246b-mesh" name="cube">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0-material" target="#Material_0-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a" name="bone4" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0 0 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <node id="33c89211-a601-2e85-3388-ea6d4be75191" name="cube" type="NODE">
+          <scale sid="scale">1 1 1</scale>
+          <translate sid="location">0.40000000000000013 0.7062500000000002 0</translate>
+          <rotate sid="rotationZ">0 0 1 180</rotate>
+          <rotate sid="rotationY">0 1 0 0</rotate>
+          <rotate sid="rotationX">1 0 0 180</rotate>
+          <instance_geometry url="#33c89211-a601-2e85-3388-ea6d4be75191-mesh" name="cube">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0-material" target="#Material_0-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="91b88c03-8317-298d-d3c3-9bcb96cee532" name="cube" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0 0 0</translate>
+        <rotate sid="rotationZ">0 0 1 6.6504203516025235</rotate>
+        <rotate sid="rotationY">0 1 0 -3.454267845476918</rotate>
+        <rotate sid="rotationX">1 0 0 -0.5799590143898607</rotate>
+        <instance_geometry url="#91b88c03-8317-298d-d3c3-9bcb96cee532-mesh" name="cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_0-material" target="#Material_0-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19" name="cube" type="NODE">
+        <scale sid="scale">1 1 1</scale>
+        <translate sid="location">0 0 0</translate>
+        <rotate sid="rotationZ">0 0 1 -6.6503999999999905</rotate>
+        <rotate sid="rotationY">0 1 0 3.4542999999998756</rotate>
+        <rotate sid="rotationX">1 0 0 0.5799999999999272</rotate>
+        <instance_geometry url="#0b6cb48a-9476-5cd1-8aa5-dd58a8b1bf19-mesh" name="cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_0-material" target="#Material_0-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+  <library_animations>
+    <animation id="animation-97ae947a-f704-a2b8-86e1-d526c8af1429" name="97ae947a-f704-a2b8-86e1-d526c8af1429">
+      <animation id="bone_rotation_euler" name="bone_rotation_euler">
+        <source id="bone_rotation_euler-input">
+          <float_array id="bone_rotation_euler-input-array" count="11">0 0.041667 0.083333 0.125 0.208333 0.291667 0.375 0.416667 0.458333 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone_rotation_euler-input-array" count="11" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone_rotation_euler_X-output">
+          <float_array id="bone_rotation_euler_X-output-array" count="11">2.5 6.181026 11.752311 18.318466 30.853853 36.624111 29.040977 21.694813 13.874703 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#bone_rotation_euler_X-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone_rotation_euler_X-sampler">
+          <input semantic="INPUT" source="#bone_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone_rotation_euler_X-output"/>
+        </sampler>
+        <channel source="#bone_rotation_euler_X-sampler" target="97ae947a-f704-a2b8-86e1-d526c8af1429/rotationX.ANGLE"/>
+        <source id="bone_rotation_euler_Y-output">
+          <float_array id="bone_rotation_euler_Y-output-array" count="11">0 0.034731 0.087297 0.14925 0.267523 0.321967 0.250418 0.181106 0.107322 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone_rotation_euler_Y-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone_rotation_euler_Y-sampler">
+          <input semantic="INPUT" source="#bone_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone_rotation_euler_Y-output"/>
+        </sampler>
+        <channel source="#bone_rotation_euler_Y-sampler" target="97ae947a-f704-a2b8-86e1-d526c8af1429/rotationY.ANGLE"/>
+        <source id="bone_rotation_euler_Z-output">
+          <float_array id="bone_rotation_euler_Z-output-array" count="11">0 -0.501334 -1.260109 -2.154379 -3.861623 -4.647498 -3.614721 -2.614217 -1.549166 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone_rotation_euler_Z-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone_rotation_euler_Z-sampler">
+          <input semantic="INPUT" source="#bone_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone_rotation_euler_Z-output"/>
+        </sampler>
+        <channel source="#bone_rotation_euler_Z-sampler" target="97ae947a-f704-a2b8-86e1-d526c8af1429/rotationZ.ANGLE"/>
+      </animation>
+      <animation id="bone_location" name="bone_location">
+        <source id="bone_location-input">
+          <float_array id="bone_location-input-array" count="4">0 0.291667 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone_location-input-array" count="4" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone_location-output">
+          <float_array id="bone_location-output-array" count="12">0.4 0.70625 0 0.275 0.20625 -0.1875 0.4 0.70625 0 0.4 0.70625 0</float_array>
+          <technique_common>
+            <accessor source="#bone_location-output-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone_location-sampler">
+          <input semantic="INPUT" source="#bone_location-input"/>
+          <input semantic="OUTPUT" source="#bone_location-output"/>
+        </sampler>
+        <channel source="#bone_location-sampler" target="97ae947a-f704-a2b8-86e1-d526c8af1429/location"/>
+      </animation>
+    </animation>
+    <animation id="animation-3104815f-22c1-dbc7-d050-6720331f219d" name="3104815f-22c1-dbc7-d050-6720331f219d">
+      <animation id="bone2_rotation_euler" name="bone2_rotation_euler">
+        <source id="bone2_rotation_euler-input">
+          <float_array id="bone2_rotation_euler-input-array" count="11">0 0.041667 0.083333 0.125 0.208333 0.291667 0.375 0.416667 0.458333 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone2_rotation_euler-input-array" count="11" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone2_rotation_euler_X-output">
+          <float_array id="bone2_rotation_euler_X-output-array" count="11">2.5 6.181026 11.752311 18.318466 30.853853 36.624111 29.040977 21.694813 13.874703 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#bone2_rotation_euler_X-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone2_rotation_euler_X-sampler">
+          <input semantic="INPUT" source="#bone2_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone2_rotation_euler_X-output"/>
+        </sampler>
+        <channel source="#bone2_rotation_euler_X-sampler" target="3104815f-22c1-dbc7-d050-6720331f219d/rotationX.ANGLE"/>
+        <source id="bone2_rotation_euler_Y-output">
+          <float_array id="bone2_rotation_euler_Y-output-array" count="11">0 0.034731 0.087297 0.14925 0.267523 0.321967 0.250418 0.181106 0.107322 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone2_rotation_euler_Y-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone2_rotation_euler_Y-sampler">
+          <input semantic="INPUT" source="#bone2_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone2_rotation_euler_Y-output"/>
+        </sampler>
+        <channel source="#bone2_rotation_euler_Y-sampler" target="3104815f-22c1-dbc7-d050-6720331f219d/rotationY.ANGLE"/>
+        <source id="bone2_rotation_euler_Z-output">
+          <float_array id="bone2_rotation_euler_Z-output-array" count="11">0 -0.501334 -1.260109 -2.154379 -3.861623 -4.647498 -3.614721 -2.614217 -1.549166 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone2_rotation_euler_Z-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone2_rotation_euler_Z-sampler">
+          <input semantic="INPUT" source="#bone2_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone2_rotation_euler_Z-output"/>
+        </sampler>
+        <channel source="#bone2_rotation_euler_Z-sampler" target="3104815f-22c1-dbc7-d050-6720331f219d/rotationZ.ANGLE"/>
+      </animation>
+      <animation id="bone2_location" name="bone2_location">
+        <source id="bone2_location-input">
+          <float_array id="bone2_location-input-array" count="4">0 0.291667 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone2_location-input-array" count="4" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone2_location-output">
+          <float_array id="bone2_location-output-array" count="12">0.4 0.70625 0 0.3375 1.20625 0.25 0.4 0.70625 0 0.4 0.70625 0</float_array>
+          <technique_common>
+            <accessor source="#bone2_location-output-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone2_location-sampler">
+          <input semantic="INPUT" source="#bone2_location-input"/>
+          <input semantic="OUTPUT" source="#bone2_location-output"/>
+        </sampler>
+        <channel source="#bone2_location-sampler" target="3104815f-22c1-dbc7-d050-6720331f219d/location"/>
+      </animation>
+    </animation>
+    <animation id="animation-ec95c30b-f992-2c99-67c3-8e34668e2e94" name="ec95c30b-f992-2c99-67c3-8e34668e2e94">
+      <animation id="bone3_rotation_euler" name="bone3_rotation_euler">
+        <source id="bone3_rotation_euler-input">
+          <float_array id="bone3_rotation_euler-input-array" count="11">0 0.041667 0.083333 0.125 0.208333 0.291667 0.375 0.416667 0.458333 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone3_rotation_euler-input-array" count="11" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone3_rotation_euler_X-output">
+          <float_array id="bone3_rotation_euler_X-output-array" count="11">2.5 6.181026 11.752311 18.318466 30.853853 36.624111 29.040977 21.694813 13.874703 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#bone3_rotation_euler_X-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone3_rotation_euler_X-sampler">
+          <input semantic="INPUT" source="#bone3_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone3_rotation_euler_X-output"/>
+        </sampler>
+        <channel source="#bone3_rotation_euler_X-sampler" target="ec95c30b-f992-2c99-67c3-8e34668e2e94/rotationX.ANGLE"/>
+        <source id="bone3_rotation_euler_Y-output">
+          <float_array id="bone3_rotation_euler_Y-output-array" count="11">0 0.034731 0.087297 0.14925 0.267523 0.321967 0.250418 0.181106 0.107322 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone3_rotation_euler_Y-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone3_rotation_euler_Y-sampler">
+          <input semantic="INPUT" source="#bone3_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone3_rotation_euler_Y-output"/>
+        </sampler>
+        <channel source="#bone3_rotation_euler_Y-sampler" target="ec95c30b-f992-2c99-67c3-8e34668e2e94/rotationY.ANGLE"/>
+        <source id="bone3_rotation_euler_Z-output">
+          <float_array id="bone3_rotation_euler_Z-output-array" count="11">0 -0.501334 -1.260109 -2.154379 -3.861623 -4.647498 -3.614721 -2.614217 -1.549166 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone3_rotation_euler_Z-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone3_rotation_euler_Z-sampler">
+          <input semantic="INPUT" source="#bone3_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone3_rotation_euler_Z-output"/>
+        </sampler>
+        <channel source="#bone3_rotation_euler_Z-sampler" target="ec95c30b-f992-2c99-67c3-8e34668e2e94/rotationZ.ANGLE"/>
+      </animation>
+      <animation id="bone3_location" name="bone3_location">
+        <source id="bone3_location-input">
+          <float_array id="bone3_location-input-array" count="4">0 0.291667 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone3_location-input-array" count="4" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone3_location-output">
+          <float_array id="bone3_location-output-array" count="12">0.4 0.70625 0 0.525 1.20625 0.1875 0.4 0.70625 0 0.4 0.70625 0</float_array>
+          <technique_common>
+            <accessor source="#bone3_location-output-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone3_location-sampler">
+          <input semantic="INPUT" source="#bone3_location-input"/>
+          <input semantic="OUTPUT" source="#bone3_location-output"/>
+        </sampler>
+        <channel source="#bone3_location-sampler" target="ec95c30b-f992-2c99-67c3-8e34668e2e94/location"/>
+      </animation>
+    </animation>
+    <animation id="animation-b1e3ffe6-98fe-6a09-2f94-af34b0ef285a" name="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a">
+      <animation id="bone4_rotation_euler" name="bone4_rotation_euler">
+        <source id="bone4_rotation_euler-input">
+          <float_array id="bone4_rotation_euler-input-array" count="11">0 0.041667 0.083333 0.125 0.208333 0.291667 0.375 0.416667 0.458333 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone4_rotation_euler-input-array" count="11" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone4_rotation_euler_X-output">
+          <float_array id="bone4_rotation_euler_X-output-array" count="11">2.5 6.269237 11.974028 18.697531 31.53331 37.441845 29.676987 22.154785 14.147282 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#bone4_rotation_euler_X-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone4_rotation_euler_X-sampler">
+          <input semantic="INPUT" source="#bone4_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone4_rotation_euler_X-output"/>
+        </sampler>
+        <channel source="#bone4_rotation_euler_X-sampler" target="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a/rotationX.ANGLE"/>
+        <source id="bone4_rotation_euler_Y-output">
+          <float_array id="bone4_rotation_euler_Y-output-array" count="11">0 -1.040407 -2.615076 -4.470936 -8.013943 -9.644851 -7.501551 -5.425228 -3.21495 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone4_rotation_euler_Y-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone4_rotation_euler_Y-sampler">
+          <input semantic="INPUT" source="#bone4_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone4_rotation_euler_Y-output"/>
+        </sampler>
+        <channel source="#bone4_rotation_euler_Y-sampler" target="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a/rotationY.ANGLE"/>
+        <source id="bone4_rotation_euler_Z-output">
+          <float_array id="bone4_rotation_euler_Z-output-array" count="11">0 -0.50853 -1.278196 -2.185302 -3.917052 -4.714206 -3.666605 -2.651741 -1.571402 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone4_rotation_euler_Z-output-array" count="11" stride="1">
+              <param name="ANGLE" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone4_rotation_euler_Z-sampler">
+          <input semantic="INPUT" source="#bone4_rotation_euler-input"/>
+          <input semantic="OUTPUT" source="#bone4_rotation_euler_Z-output"/>
+        </sampler>
+        <channel source="#bone4_rotation_euler_Z-sampler" target="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a/rotationZ.ANGLE"/>
+      </animation>
+      <animation id="bone4_location" name="bone4_location">
+        <source id="bone4_location-input">
+          <float_array id="bone4_location-input-array" count="4">0 0.291667 0.541667 0.583333</float_array>
+          <technique_common>
+            <accessor source="#bone4_location-input-array" count="4" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bone4_location-output">
+          <float_array id="bone4_location-output-array" count="12">0 0 0 -0.125 -0.3125 -0.5625 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#bone4_location-output-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="bone4_location-sampler">
+          <input semantic="INPUT" source="#bone4_location-input"/>
+          <input semantic="OUTPUT" source="#bone4_location-output"/>
+        </sampler>
+        <channel source="#bone4_location-sampler" target="b1e3ffe6-98fe-6a09-2f94-af34b0ef285a/location"/>
+      </animation>
+    </animation>
+  </library_animations>
+  <library_animation_clips>
+    <animation_clip id="animation.trex.walk" name="animation.trex.walk" start="0" end="0.5833333333333334"/>
+  </library_animation_clips>
+</COLLADA>

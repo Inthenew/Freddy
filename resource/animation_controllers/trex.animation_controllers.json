@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.trex.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target"
+					]
+				}
+			}
+		},
+		"controller.animation.trex.move" : {
+			"initial_state" : "walking",
+			"states" : {
+				"walking" : {
+					"animations" : [ { "walk" : "query.modified_move_speed" } ],
+          "blend_transition" : 0.2,
+					"transitions" : [
+						{
+							"attacking" : "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attacking" : {
+					"animations" : [ "attack" ],
+          "blend_transition" : 0.2,
+          "blend_via_shortest_path" : true,
+					"transitions" : [
+						{
+							"walking" : "!query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		}
+	}
+}

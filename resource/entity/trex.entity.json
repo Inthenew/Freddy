@@ -1,0 +1,46 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goodlord:trex",
+      "materials": {
+        "default": "cat"
+      },
+      "textures": {
+        "trex1": "textures/entity/trex1",
+        "trex2": "textures/entity/trex2",
+        "trex3": "textures/entity/trex3",
+        "trex4": "textures/entity/trex4",
+        "trex5": "textures/entity/trex5",
+        "trex6": "textures/entity/trex6"
+      },
+      "geometry": {
+        "default": "geometry.trex"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+          "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;"
+        ]
+      },
+      "animations": {
+        "look_at_target": "animation.trex.look_at_target",
+        "walk": "animation.trex.walk",
+        "breathe": "animation.trex.blow",
+        "attack": "animation.trex.attack",
+        "baby_transform": "animation.trex.baby_transform"
+      },
+      "animation_controllers": [
+        { "baby": "controller.animation.trex.baby" },
+        { "look_at_target": "controller.animation.trex.look_at_target" },
+        { "attack": "controller.animation.trex.attack" },
+        { "move": "controller.animation.trex.move" }
+      ],
+      "render_controllers": [ "controller.render.trex" ],
+      "spawn_egg": {
+        "base_color": "#605050",
+        "overlay_color": "#201b1b"
+      }
+    }
+  }
+}

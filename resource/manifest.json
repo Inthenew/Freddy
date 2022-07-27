@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "header": {
+    "name": "Freddy (resource)",
+    "description": "Freddy love.",
+    "uuid": "acbce562-df71-4f6e-9358-6a99d5be813b",
+    "version": [3, 9, 9]    
+  },
+  "modules": [
+    {
+      "description": "Big Cats",
+      "type": "resources",
+      "uuid": "7b1a2c15-040a-432b-8edf-8a1a0be1c068",
+      "version": [3, 9, 9]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "47f6ee09-ada9-4023-8955-117fd87be8c5",
+      "version": [3, 9, 9]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entity_sounds": {
+    "entities": {
+
+      "goodlord:trex": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "hurt": "mob.trex.hurt",
+          "ambient": "mob.trex.idle",
+          "death": "mob.wolf.death",
+          "preattack": "mob.wolf.preattack",
+          "attack": {
+            "sound": "mob.wolf.attack",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 4
+          },
+          "step": {
+            "sound": "mob.wolf.step",
+            "volume": 4,
+            "pitch": 0.6
+          }
+        }
+      }
+    }
+  }
+}

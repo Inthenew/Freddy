@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "header": {
+    "name": "Freddy (behavior)",
+    "description": "Freddy love.",
+    "uuid": "47f6ee09-ada9-4023-8955-117fd87be8c5",
+    "version": [3, 9, 9]    
+  },
+  "modules": [
+    {
+      "description": "Freddy",
+      "type": "data",
+      "uuid": "80d6dd35-8973-4b27-8058-04a8d8084f79",
+      "version": [3, 9, 9]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "acbce562-df71-4f6e-9358-6a99d5be813b",
+      "version": [3, 9, 9]
+    }
+  ]
+}

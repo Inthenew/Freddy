@@ -1,0 +1,41 @@
+{
+  "mob.trex.idle": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/mob/trex/idle1",
+      "sounds/mob/trex/idle2",
+      "sounds/mob/trex/idle3",
+      "sounds/mob/trex/idle4",
+      "sounds/mob/trex/idle5"
+    ]
+  },
+  "mob.trex.attack": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/mob/trex/attack1",
+      "sounds/mob/trex/attack2",
+      "sounds/mob/trex/attack3",
+      "sounds/mob/trex/attack4"
+    ]
+  },
+  "mob.trex.death": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/mob/trex/death1",
+      "sounds/mob/trex/death2"
+    ]
+  },
+  "mob.trex.hurt": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/mob/trex/hurt1",
+      "sounds/mob/trex/hurt2"
+    ]
+  },
+  "mob.trex.preattack": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/mob/trex/pre1"    
+    ]
+  }
+}

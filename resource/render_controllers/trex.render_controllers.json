@@ -1,0 +1,17 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.trex": {
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.base[query.variant]" ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.trex1"
+          ]
+        }
+      },
+      "geometry": "Geometry.default"
+    }
+  }
+}
